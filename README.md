@@ -2,7 +2,7 @@
 
 URL: <a/>https://github.com/tjuqxb/6650-assignment2</a>  
 
-###Main Classes In Server###
+### Main Classes In Server ###
 **ResortServlet**:This class handles the requests to /resorts/* route.It is responsible for validating the paths and parameters. It also checks the format of JSON POST.   
 
 **SkierServlet**:This class handles the requests to /skiers/* route.It is responsible for validating the paths and parameters. It also checks the format of JSON POST. In init(), it also creates a connection to RabbitMQ and intializes a channel pool.  
@@ -24,7 +24,7 @@ URL: <a/>https://github.com/tjuqxb/6650-assignment2</a>
 
 **Receive**: The user would input the number of consumer threads to the main entry point in ConsumerService. Then in main() method the program would put the same number of threads to the thread pool. Every single Consumer thread would own its own Channel and keep consuming messages from the Channel. Every message Object would be in a Vector and every Vector is associated with a skier ID in a ConcurrentMap. Those two data structures are thread safe in multi-thread programming.
 
-### Results and analysis###
+### Results and analysis ###
 **Analysis on throughput**:  
 I run the loading tests from local laptop. The loading tests run 64, 128, 256, 512 client threads to exert load on 1 instance, 2 instances and 4 instances (t2 micro instance).  
 There are some analysis:    
